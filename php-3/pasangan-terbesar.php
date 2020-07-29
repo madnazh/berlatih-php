@@ -1,6 +1,15 @@
 <?php
 function pasangan_terbesar($angka){
 // kode di sini
+  $pair = 0;
+  $arr = str_split($angka);
+  
+  for ($i = 0; $i < count($arr) - 1; $i++) {
+    if ($i === 0) $pair = $arr[i] + $arr[$i+1];
+    if ($pair < $arr[$i] + $arr[$i+1]) $pair = $arr[$i] + $arr[$i+1];
+  }
+  echo $pair;
+  echo "<br>";
 }
 
 // TEST CASES
